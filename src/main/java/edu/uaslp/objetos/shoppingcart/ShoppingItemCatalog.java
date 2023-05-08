@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class ShoppingItemCatalog {
 
-    private final Map<String, ShoppingItem> catalog;
+    private final  Map<String, ShoppingItem> catalog;
 
     public ShoppingItemCatalog(){
         catalog = new HashMap<>();
@@ -28,7 +28,7 @@ public class ShoppingItemCatalog {
         catalog.put("ABC4002", new ShoppingItem("Barra de sonido", "Articulo de entretenimiento", "ABC4002", 1125000));
     }
 
-    public ShoppingItem getItem(String code){
+    public static ShoppingItem getItem(String code){
         if(catalog.containsKey(code)){
             return catalog.get(code);
         }
